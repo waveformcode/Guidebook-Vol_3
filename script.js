@@ -1,9 +1,25 @@
+//APARTMENT INFORMATION BUTTON
+const btn = document.querySelector("#btn");
+const infoPanel = document.querySelector("#infoPanel");
+const body = document.querySelector("#body");
+
+btn.addEventListener("click", () => {
+  infoPanel.classList.toggle("active");
+});
+
+//PANEL INFORMATION ON/OFF
+infoPanel.addEventListener("click", (event) => {
+  if (event.target === infoPanel || event.target === body) {
+    infoPanel.classList.remove("active");
+  }
+});
+
 //WIFI SELECT
 const wifiSelect = document.querySelector("#wifiSelect");
 const wifiReturn = document.querySelector("#wifiReturn");
 
 wifiSelect.addEventListener("change", () => {
-  if (wifiSelect.value === "cozy cottage") {
+  if (wifiSelect.value === "cozy") {
     wifiReturn.textContent = "Wi-Fi Name: Cozy Cottage\nPassword: 2841061660a";
   } else if (wifiSelect.value === "yiamarin") {
     wifiReturn.textContent = "Wi-Fi Name: Yiamarin\nPassword: 2841061660a";
@@ -11,15 +27,3 @@ wifiSelect.addEventListener("change", () => {
     wifiReturn.textContent = "Select room for Wi-Fi";
   }
 });
-
-//WEATHER
-!(function (d, s, id) {
-  var js,
-    fjs = d.getElementsByTagName(s)[0];
-  if (!d.getElementById(id)) {
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://weatherwidget.io/js/widget.min.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }
-})(document, "script", "weatherwidget-io-js");

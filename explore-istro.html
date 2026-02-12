@@ -4,75 +4,322 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore Istro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
+    <h1 class="visually-hidden">Things to Do Around Istron</h1>
+    <!--Navigation Bar-->
+    <nav class="nav-bar">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            id="logo"
+            src="images/Yiamarin-Logo.jpg"
+            alt="Yiamarin Logo"
+            href="index.html"
+        /></a>
+      </div>
+      <div class="nav-bar-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="restaurants.html" data-i18n="nav-restaurants"
+              >Restaurants</a
+            >
+          </li>
+          <li><a href="beaches.html">Beaches</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li>
+            <a href="history-culture.html">History &amp; Culture</a>
+          </li>
+          <li><a href="activities.html">Activities</a></li>
+        </ul>
+      </div>
+
+      <!-- language Switch -->
+      <div class="language-switch visually-hidden">
+        <a href="giamarin-guidebook.html" class="flag">🇬🇧</a>
+        <a href="Οδηγός-yiamarin.html" class="flag">🇬🇷</a>
+      </div>
+    </nav>
+
     <section class="local-experiences">
-      <h2>Things to Do Around Istron</h2>
-      <p class="section-intro">
+      <h2 class="visually-hidden">Things to Do Around Istron</h2>
+      <p class="section-intro visually-hidden">
         Simple, everyday moments to enjoy the area like a local, just a short
         walk from the apartment.
       </p>
 
-      <ul class="experience-list">
-        <li>
-          <span class="icon">🚶</span>
-          <div>
-            <strong>Walk around Pyrgos neighborhood</strong>
+      <div class="local-experience-list">
+        <div class="local-experiences">
+          <img
+            src="images/explore-istro/village.png"
+            alt="Raki in a traditional kafeneio in Pirgos"
+          />
+          <div class="local-experience-text">
+            <h2>Walk around Pyrgos & Kalo Chorio neighborhood</h2>
             <p>
               Quiet streets, old houses and authentic village life just a few
               minutes away.
             </p>
           </div>
-        </li>
+        </div>
 
-        <li>
-          <span class="icon">☕</span>
-          <div>
-            <strong>Morning coffee in the village</strong>
+        <div class="local-experiences">
+          <img
+            src="images/explore-istro/coffee.png"
+            alt="Raki in a traditional kafeneio in Pirgos"
+          />
+          <div class="local-experience-text">
+            <h2>Morning coffee in the village</h2>
             <p>
               Start the day slowly with a coffee among locals, no rush, no
               crowds.
             </p>
           </div>
-        </li>
+        </div>
 
-        <li>
-          <span class="icon">🥃</span>
-          <div>
-            <strong>Raki at the local kafeneio</strong>
+        <div class="local-experiences">
+          <img
+            src="images/explore-istro/raki2.png"
+            alt="Raki in a traditional kafeneio in Pirgos"
+          />
+          <div class="local-experience-text">
+            <h2>Raki at the local kafeneio in Pyrgos</h2>
             <p>
               A small stop for a raki or soft drink, especially pleasant in the
               afternoon.
             </p>
           </div>
-        </li>
+        </div>
 
-        <li>
-          <span class="icon">🌊</span>
-          <div>
-            <strong>Seaside walk at Karavostasi</strong>
+        <div class="local-experiences">
+          <img
+            src="images/explore-istro/karavostasi.png"
+            alt="Raki in a traditional kafeneio in Pirgos"
+          />
+          <div class="local-experience-text">
+            <h2>Seaside walk at Karavostasi</h2>
             <p>A calm coastal walk, perfect before sunset or after dinner.</p>
           </div>
-        </li>
+        </div>
 
-        <li>
-          <span class="icon">🏊</span>
-          <div>
-            <strong>Early morning or late afternoon swim</strong>
+        <div class="local-experiences">
+          <img
+            src="images/explore-istro/swim.jpg"
+            alt="Raki in a traditional kafeneio in Pirgos"
+          />
+          <div class="local-experience-text">
+            <h2>Early morning or late afternoon swim</h2>
             <p>The quietest and most relaxing times to enjoy the sea.</p>
           </div>
-        </li>
+        </div>
+        <!--
+        <div>
+          <h2>Evening walk after dinner</h2>
+          <p>A quiet walk through the village when everything slows down.</p>
+        </div>
 
-        <li>
-          <span class="icon">🌅</span>
-          <div>
-            <strong>Sunset pause nearby</strong>
-            <p>
-              Sit, watch the colors change and enjoy the peaceful atmosphere.
-            </p>
-          </div>
-        </li>
-      </ul>
+        <div>
+          <h2>Sunset pause nearby</h2>
+          <p>Sit, watch the colors change and enjoy the peaceful atmosphere.</p>
+        </div>-->
+      </div>
     </section>
+
+    <!--FOOTER-->
+    <footer>
+      <div class="footer-first-row">
+        <!--Emergency Contact-->
+        <div class="emergency-contacts">
+          <h2>
+            <i class="fa-solid fa-triangle-exclamation"></i> Emergency Contacts
+          </h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone-volume"></i>Emergency:
+              <a href="tel:112">112</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-fire-extinguisher"></i>Fire Department:
+              <a href="tel:199">199</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-kit-medical"></i>Hospital:
+              <a href="tel:106">106</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-shield-halved"></i>Police:
+              <a href="tel:100">100</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--Transports-->
+        <div class="transports">
+          <h2><i class="fa-solid fa-route"></i> Local Transports</h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-taxi"></i>Taxi Contact:<a
+                href="tel:30 697 7352782"
+              >
+                +30 697 7352782</a
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-bus"></i
+              ><a
+                class="link"
+                href="https://www.ktelherlas.gr/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bus Timetable</a
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-bus"></i
+              ><a
+                class="link"
+                href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bus Stop</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="contacts">
+          <h2><i class="fa-solid fa-phone"></i>Contacts</h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone"></i
+              ><a class="tel" href="tel:+306944622165">+30 694 4622165</a>
+            </li>
+            <li>
+              <i class="fab fa-whatsapp whatsapp-icon-top"></i>
+              <a
+                class="app"
+                href="https://wa.me/447459293270"
+                target="_blank"
+                rel="noopener noreferrer"
+                >WhatsApp Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <div class="social">
+          <h2>Follow us</h2>
+          <!-- prettier-ignore -->
+          <a href="https://www.instagram.com/yiamarin" target="_blank">
+          <?xml version="1.0" encoding="iso-8859-1"?>
+          <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+           <svg
+            class="ig"
+            height="50px"
+            width="50px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 551.034 551.034"
+            xml:space="preserve"
+          >
+            <g id="XMLID_13_">
+              <linearGradient
+                id="XMLID_2_"
+                gradientUnits="userSpaceOnUse"
+                x1="275.517"
+                y1="4.5714"
+                x2="275.517"
+                y2="549.7202"
+                gradientTransform="matrix(1 0 0 -1 0 554)"
+              >
+                <stop offset="0" style="stop-color: #e09b3d" />
+                <stop offset="0.3" style="stop-color: #c74c4d" />
+                <stop offset="0.6" style="stop-color: #c21975" />
+                <stop offset="1" style="stop-color: #7024c4" />
+              </linearGradient>
+              <path
+                id="XMLID_17_"
+                style="fill: url(#XMLID_2_)"
+                d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722
+		c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156
+		C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156
+		c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722
+		c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878L495.6,386.878z"
+              />
+
+              <linearGradient
+                id="XMLID_3_"
+                gradientUnits="userSpaceOnUse"
+                x1="275.517"
+                y1="4.5714"
+                x2="275.517"
+                y2="549.7202"
+                gradientTransform="matrix(1 0 0 -1 0 554)"
+              >
+                <stop offset="0" style="stop-color: #e09b3d" />
+                <stop offset="0.3" style="stop-color: #c74c4d" />
+                <stop offset="0.6" style="stop-color: #c21975" />
+                <stop offset="1" style="stop-color: #7024c4" />
+              </linearGradient>
+              <path
+                id="XMLID_81_"
+                style="fill: url(#XMLID_3_)"
+                d="M275.517,133C196.933,133,133,196.933,133,275.516
+		s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6
+		c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083
+		C362.6,323.611,323.611,362.6,275.517,362.6z"
+              />
+
+              <linearGradient
+                id="XMLID_4_"
+                gradientUnits="userSpaceOnUse"
+                x1="418.306"
+                y1="4.5714"
+                x2="418.306"
+                y2="549.7202"
+                gradientTransform="matrix(1 0 0 -1 0 554)"
+              >
+                <stop offset="0" style="stop-color: #e09b3d" />
+                <stop offset="0.3" style="stop-color: #c74c4d" />
+                <stop offset="0.6" style="stop-color: #c21975" />
+                <stop offset="1" style="stop-color: #7024c4" />
+              </linearGradient>
+              <circle
+                id="XMLID_83_"
+                style="fill: url(#XMLID_4_)"
+                cx="418.306"
+                cy="134.072"
+                r="34.149"
+              />
+            </g>
+          </svg>
+        </a>
+        </div>
+      </div>
+      <div class="footer-second-row">
+        <div class="signature">
+          <p>
+            <span class="signature-prg"
+              >Designed for Yiamarin Apartments guests</span
+            >
+            with care by
+          </p>
+          <a href="tel:+306944622165"
+            ><img class="digiko" src="images/png_icons/digiko.png" alt=""
+          /></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -10,36 +10,39 @@
       crossorigin="anonymous"
     ></script>
 
-    <meta name="author" content="Sonocode / Lunor" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
 
-  <body>
+  <body id="body">
     <!--Navigation Bar-->
     <nav class="nav-bar">
-      <a href="index.html">
-        <img
-          id="logo"
-          src="images/Yiamarin-Logo.jpg"
-          alt="Yiamarin Logo"
-          href="index.html"
-      /></a>
-      <ul>
-        <li>
-          <a href="restaurants.html" data-i18n="nav-restaurants">Restaurants</a>
-        </li>
-        <li><a href="beaches.html">Beaches</a></li>
-        <li><a href="Explore.html">Explore</a></li>
-        <li>
-          <a href="history-culture.html">History &amp; Culture</a>
-        </li>
-        <li><a href="activities.html">Activities</a></li>
-      </ul>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            id="logo"
+            src="images/Yiamarin-Logo.jpg"
+            alt="Yiamarin Logo"
+            href="index.html"
+        /></a>
+      </div>
+      <div class="nav-bar-links">
+        <ul>
+          <li>
+            <a href="restaurants.html" data-i18n="nav-restaurants"
+              >Restaurants</a
+            >
+          </li>
+          <li><a href="beaches.html">Beaches</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li>
+            <a href="history-culture.html">History &amp; Culture</a>
+          </li>
+          <li><a href="activities.html">Activities</a></li>
+        </ul>
+      </div>
 
       <!-- language Switch -->
       <div class="language-switch visually-hidden">
@@ -50,174 +53,203 @@
 
     <main>
       <!-- Welcome Message -->
-      <section class="intro visually-hidden">
-        <div class="welcome-message">
-          <h1 class="visually-hidden">Yiamarin Apartments Guest Guide</h1>
-          <p data-i18n="welcome-message" class="welcome-p fade-in">
-            Welcome to Yiamarin Guidebook!<br />
-            We’re so happy to have you here! Whether you’re here to relax,
-            explore or just unwind, this guide will help you make the most of
-            your stay. Inside, you’ll find everything from local beaches and
-            restaurants to activities and essentials. Need anything? We’re just
-            a message away. Enjoy every moment!
+      <section class="intro, visually-hidden">
+        <h2>Welcome to Yiamarin</h2>
+        <p data-i18n="welcome-message" class="welcome-p fade-in">
+          Explore the area and make the most of your stay!Everything you need
+          during your stay
+        </p>
+      </section>
+
+      <!-- APARTMENT INFORMATION -->
+      <section class="apartment-information">
+        <button id="btn" class="info-toggle">
+          <h2>Apartment Information</h2>
+          <p>
+            Wi-Fi details, check-in & check-out information, and house rules
           </p>
-        </div>
-        <div class="welcome-p-mobile">
-          <p class="fade-in">
-            Welcome to Yiamarin Guidebook! Relax, explore or unwind, discover
-            our top beaches, restaurants, activities and essentials. Need help?
-            We’re just a message away. Enjoy every moment!
-          </p>
+        </button>
+
+        <div class="info-panel" id="infoPanel">
+          <div class="wifi-box">
+            <label for="wifiSelect">Wi-Fi Access</label>
+
+            <select id="wifiSelect">
+              <option value="">Select Room</option>
+              <option value="cozy">Cozy Cottage</option>
+              <option value="yiamarin">Yiamarin</option>
+            </select>
+
+            <div class="wifi-password" id="wifiReturn"></div>
+          </div>
+
+          <a id="checkINnOut" class="info-link" href="check-in-out.html">
+            Check-in & Check-out instructions
+          </a>
+
+          <a id="houseRules" class="info-link" href="house-rules.html">
+            House rules
+          </a>
         </div>
       </section>
 
-      <!--Check-In-Out-->
-      <section class="arrival-info">
-        <div class="left-box">
-          <div class="check-in-out, visually-hidden">
-            <h2>
-              <i class="fa-solid fa-user-clock"></i>Check-In &amp; Check-Out
-            </h2>
-            <ul>
-              <li>Check-In: 03:00 PM</li>
-              <li>Check-Out: 11:00 AM</li>
-              <li>
-                <a href="check-in.html" class="read-more-link"
-                  >Read full instructions</a
-                >
-              </li>
-            </ul>
+      <!-- Map -->
+      <section class="map-section, visually-hidden">
+        <div class="iframe">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2658001958243!2d25.737487543398718!3d35.125039971813045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149081debc0241d7%3A0x8692115c7242889e!2sYiamarin%20Apartments!5e0!3m2!1sen!2sgr!4v1770293178396!5m2!1sen!2sgr"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="location-desc">
+          <h2>Yiamarin Apartments</h2>
+          <p>Istron, Agios Nikolaos<br />Crete, Greece 72100</p>
+        </div>
+      </section>
+
+      <!-- NEARBY ESSENTIALS-LIST -->
+      <section class="nearby-essentials">
+        <!-- <h2 class="neardy-essential-title">Nearby Essentials</h2>
+        <p class="nearby-hint">Scroll & tap an icon for directions.</p> -->
+
+        <div class="nearby-essential-list">
+          <!--HOUSE LOCATION-->
+          <div class="essential">
+            <a
+              data-icons="House Location"
+              href="https://maps.app.goo.gl/omuLNgQv7Gco8Msr7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nearby-list-link"
+            >
+              <img
+                class="nearby-icons"
+                src="images/png_icons/icons8-house-location-100.png"
+                alt="House Location"
+              />
+            </a>
+          </div>
+
+          <!--SUPERMARKET-->
+          <div class="essential">
+            <a
+              data-icons="Mini Market"
+              href="https://maps.app.goo.gl/gUXUWLrJKinXxEQGA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nearby-list-link"
+            >
+              <img
+                class="nearby-icons"
+                src="images/png_icons/shopping-cart.png"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <!--BAKERY-->
+          <div class="essential">
+            <a
+              data-icons="Bakery"
+              href="https://maps.app.goo.gl/aErCRcrNVZEhnZRg6"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nearby-list-link"
+            >
+              <img
+                class="nearby-icons"
+                src="images/png_icons/bread.png"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <!--ATM-->
+          <div class="essential">
+            <a
+              data-icons="ATM"
+              href="https://maps.app.goo.gl/8wni9bL696a2XXAC9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nearby-list-link"
+            >
+              <img
+                class="nearby-icons"
+                src="images/png_icons/atm2.png"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <!--PHARMACY-->
+          <div class="essential">
+            <a
+              data-icons="Pharmacy"
+              href="https://maps.app.goo.gl/Sq1jYhixmBMoEtwv9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nearby-list-link"
+            >
+              <img
+                class="nearby-icons"
+                src="images/png_icons/hospital.png"
+                alt=""
+            /></a>
+          </div>
+
+          <!--Gas Station-->
+          <div class="essential">
+            <a
+              data-icons="Gas Station"
+              href="https://maps.app.goo.gl/uZAavbfPxXe62kxx7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nearby-list-link"
+            >
+              <img
+                class="nearby-icons"
+                src="images/png_icons/gas-station.png"
+                alt=""
+              />
+            </a>
           </div>
         </div>
       </section>
 
-      <aside class="neighborhood-info">
-        <div class="essentials">
-          <div class="essential-heading visually-hidden">
-            <h2>
-              <img
-                class="icons"
-                src="images/png_icons/placeholder.png"
-                alt=""
-              />Daily Essentials
-            </h2>
-          </div>
-          <div class="daily-essentials">
-            <!--SUPERMARKET-->
-            <div class="essential">
-              <a
-                data-icons="Mini Market"
-                href="https://maps.app.goo.gl/gUXUWLrJKinXxEQGA"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="essential-link"
-              >
-                <img
-                  class="icons"
-                  src="images/png_icons/shopping-cart.png"
-                  alt=""
-                />
-              </a>
-            </div>
-
-            <!--BAKERY-->
-            <div class="essential">
-              <a
-                data-icons="Bakery"
-                href="https://maps.app.goo.gl/aErCRcrNVZEhnZRg6"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="essential-link"
-              >
-                <img class="icons" src="images/png_icons/bread.png" alt="" />
-              </a>
-            </div>
-
-            <!--ATM-->
-            <div class="essential">
-              <a
-                data-icons="ATM"
-                href="https://maps.app.goo.gl/8wni9bL696a2XXAC9"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="essential-link"
-              >
-                <img class="icons" src="images/png_icons/atm2.png" alt="" />
-              </a>
-            </div>
-
-            <!--PHARMACY-->
-            <div class="essential">
-              <a
-                data-icons="Pharmacy"
-                href="https://maps.app.goo.gl/Sq1jYhixmBMoEtwv9"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="essential-link"
-              >
-                <img class="icons" src="images/png_icons/hospital.png" alt=""
-              /></a>
-            </div>
-
-            <!--Gas Station-->
-            <div class="essential">
-              <a
-                data-icons="Gas Station"
-                href="https://maps.app.goo.gl/uZAavbfPxXe62kxx7"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="essential-link"
-              >
-                <img
-                  class="icons"
-                  src="images/png_icons/gas-station.png"
-                  alt=""
-                />
-              </a>
-            </div>
-
-            <!--Bus Stop-->
-            <div class="essential">
-              <a
-                data-icons="Bus Stop"
-                href="https://maps.app.goo.gl/gRpG9fZH1AeTvnfi7"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="essential-link"
-              >
-                <img class="icons" src="images/png_icons/bus-stop.png" alt="" />
-              </a>
-            </div>
-          </div>
-
-          <!--location-->
-          <div class="apt-location visually-hidden">
-            <h2>
-              <img
-                class="icons"
-                src="images/png_icons/placeholder.png"
-                alt=""
-              />Apartments Location
-            </h2>
-            <iframe
-              title="Map to Yiamarin Apartments"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.3167788903!2d25.735899676291538!3d35.12376757277249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149081debc0241d7%3A0x8692115c7242889e!2sYiamarin%20Apartments!5e0!3m2!1sen!2sgr!4v1743877345409!5m2!1sen!2sgr"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </aside>
+      <!--location-->
+      <!-- <div class="apt-location visually-hidden">
+          <h2>
+            <img
+              class="icons"
+              src="images/png_icons/placeholder.png"
+              alt=""
+            />Apartments Location
+          </h2>
+          <iframe
+            title="Map to Yiamarin Apartments"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.3167788903!2d25.735899676291538!3d35.12376757277249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149081debc0241d7%3A0x8692115c7242889e!2sYiamarin%20Apartments!5e0!3m2!1sen!2sgr!4v1743877345409!5m2!1sen!2sgr"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>-->
 
       <!--recommedations-->
       <section class="our-recommedations">
         <div class="recommedations-grid">
           <!-- RESTAURANTS -->
-          <div class="recommedations-container restaurants">
+          <div
+            class="recommedations-container restaurants"
+            style="grid-area: restaurants"
+          >
             <a href="restaurants.html">
               <p>Restaurants</p>
               <img
@@ -227,15 +259,21 @@
           </div>
 
           <!-- BEACHES -->
-          <div class="recommedations-container beaches">
-            <a href="Beaches.html"
+          <div
+            class="recommedations-container beaches"
+            style="grid-area: beaches"
+          >
+            <a href="beaches.html"
               ><p>Beaches</p>
               <img src="images/Beaches/voulisma.jpg" alt="Beaches"
             /></a>
           </div>
 
           <!-- EXPLORE -->
-          <div class="recommedations-container attractions">
+          <div
+            class="recommedations-container attractions"
+            style="grid-area: explore"
+          >
             <a href="explore.html"
               ><p>Explore</p>
               <img src="images/explore/voulismeni.jpg" alt="Attractions"
@@ -243,7 +281,10 @@
           </div>
 
           <!-- History & Culture -->
-          <div class="recommedations-container cultural-historic-sites">
+          <div
+            class="recommedations-container cultural-historic-sites"
+            style="grid-area: culture"
+          >
             <a href="history-culture.html"
               ><p>History & Culture</p>
               <img
@@ -253,7 +294,10 @@
           </div>
 
           <!-- ACTIVITIES -->
-          <div class="recommedations-container activities">
+          <div
+            class="recommedations-container activities"
+            style="grid-area: activities"
+          >
             <a href="activities.html"
               ><p>Activities</p>
               <img src="images/activities/sarakina.jpg" alt="Activities"
@@ -261,176 +305,107 @@
           </div>
 
           <!-- EXPLORE ISTRO -->
-          <div class="recommedations-container istro">
+          <div
+            class="recommedations-container istro"
+            style="grid-area: explore-istro"
+          >
             <a href="explore-istro.html"
               ><p>Explore Istro</p>
-              <img src="images/istro.jpg" alt="Isto village"
+              <img src="images/istro.jpg" alt="Explore Istro neighborhoods"
             /></a>
           </div>
-
-          <!--<div class="recommedations-container istro">
-            <ul>
-              <li>
-                <div class="wifi">
-                  <form class="form">
-                    <label class="wifi-name"
-                      ><img
-                        class="icons visually-hidden"
-                        src="images/png_icons/wi-fi-icon.png"
-                        alt=""
-                      />Wi-Fi Access</label
-                    >
-                    <select class="" id="wifiSelect">
-                      <option value="">Select Room</option>
-                      <option value="cozy cottage">Cozy Cottage</option>
-                      <option value="yiamarin">Yiamarin</option>
-                    </select>
-                    <p class="wifi-return" id="wifiReturn"></p>
-                  </form>
-                </div>
-              </li>
-              <li><a href="explore-istro.html">Explore Istro</a></li>
-              <li><a href="house-rules.html">House rules</a></li>
-              <li>
-                <a href="check-in.html" class="read-more-link"
-                  >Check-in-out instructions</a
-                >
-              </li>
-            </ul>
-          </div>-->
         </div>
       </section>
-
-      <!--WEATHER-->
-      <div class="weather visually-hidden">
-        <a
-          class="weatherwidget-io"
-          href="https://forecast7.com/en/35d1225d74/istro/"
-          data-label_1="ISTRO"
-          data-label_2="WEATHER"
-          data-theme="weather_one"
-          >ISTRO WEATHER</a
-        >
-      </div>
     </main>
 
     <!--FOOTER-->
     <footer>
-      <div></div>
-      <div class="house-essential">
-        <ul>
-          <li>
-            <div class="wifi">
-              <form class="form">
-                <label class="wifi-name"
-                  ><img
-                    class="icons visually-hidden"
-                    src="images/png_icons/wi-fi-icon.png"
-                    alt=""
-                  />Wi-Fi Access</label
-                >
-                <select class="" id="wifiSelect">
-                  <option value="">Select Room</option>
-                  <option value="cozy cottage">Cozy Cottage</option>
-                  <option value="yiamarin">Yiamarin</option>
-                </select>
-                <p class="wifi-return" id="wifiReturn"></p>
-              </form>
-            </div>
-          </li>
-          <li>
-            <a href="check-in-out.html" class="read-more-link"
-              >Check-in-out instructions</a
-            >
-          </li>
-          <li><a href="house-rules.html">House rules</a></li>
-        </ul>
-      </div>
-      <!--Emergency Contact-->
-      <div class="emergency-contacts">
-        <h2>
-          <i class="fa-solid fa-triangle-exclamation"></i> Emergency Contacts
-        </h2>
-        <ul>
-          <li>
-            <i class="fa-solid fa-phone-volume"></i>Emergency:
-            <a href="tel:112">112</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-fire-extinguisher"></i>Fire Department:
-            <a href="tel:199">199</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-kit-medical"></i>Hospital:
-            <a href="tel:106">106</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-shield-halved"></i>Police:
-            <a href="tel:100">100</a>
-          </li>
-        </ul>
-      </div>
+      <div class="footer-first-row">
+        <!--Emergency Contact-->
+        <div class="emergency-contacts">
+          <h2>
+            <i class="fa-solid fa-triangle-exclamation"></i> Emergency Contacts
+          </h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone-volume"></i>Emergency:
+              <a href="tel:112">112</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-fire-extinguisher"></i>Fire Department:
+              <a href="tel:199">199</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-kit-medical"></i>Hospital:
+              <a href="tel:106">106</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-shield-halved"></i>Police:
+              <a href="tel:100">100</a>
+            </li>
+          </ul>
+        </div>
 
-      <!--Transports-->
-      <div class="transports">
-        <h2><i class="fa-solid fa-route"></i> Local Transports</h2>
-        <ul>
-          <li>
-            <i class="fa-solid fa-taxi"></i>Taxi Contact:<a
-              href="tel:30 697 7352782"
-            >
-              +30 697 7352782</a
-            >
-          </li>
-          <li>
-            <i class="fa-solid fa-bus"></i
-            ><a
-              class="link"
-              href="https://www.ktelherlas.gr/en"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Bus Timetable</a
-            >
-          </li>
-          <li>
-            <i class="fa-solid fa-bus"></i
-            ><a
-              class="link"
-              href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Bus Stop</a
-            >
-          </li>
-        </ul>
-      </div>
+        <!--Transports-->
+        <div class="transports">
+          <h2><i class="fa-solid fa-route"></i> Local Transports</h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-taxi"></i>Taxi Contact:<a
+                href="tel:30 697 7352782"
+              >
+                +30 697 7352782</a
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-bus"></i
+              ><a
+                class="link"
+                href="https://www.ktelherlas.gr/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bus Timetable</a
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-bus"></i
+              ><a
+                class="link"
+                href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bus Stop</a
+              >
+            </li>
+          </ul>
+        </div>
 
-      <!-- CONTACT -->
-      <div class="contacts">
-        <h2><i class="fa-solid fa-phone"></i>Contacts</h2>
-        <ul>
-          <li>
-            <i class="fa-solid fa-phone"></i
-            ><a class="tel" href="tel:+306944622165">+30 694 4622165</a>
-          </li>
-          <li>
-            <i class="fab fa-whatsapp whatsapp-icon-top"></i>
-            <a
-              class="app"
-              href="https://wa.me/447459293270"
-              target="_blank"
-              rel="noopener noreferrer"
-              >WhatsApp Us</a
-            >
-          </li>
-        </ul>
-      </div>
+        <!-- CONTACT -->
+        <div class="contacts">
+          <h2><i class="fa-solid fa-phone"></i>Contacts</h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone"></i
+              ><a class="tel" href="tel:+306944622165">+30 694 4622165</a>
+            </li>
+            <li>
+              <i class="fab fa-whatsapp whatsapp-icon-top"></i>
+              <a
+                class="app"
+                href="https://wa.me/447459293270"
+                target="_blank"
+                rel="noopener noreferrer"
+                >WhatsApp Us</a
+              >
+            </li>
+          </ul>
+        </div>
 
-      <!-- SOCIAL MEDIA -->
-      <div class="social">
-        <h2>Follow us</h2>
-        <!-- prettier-ignore -->
-        <a href="https://www.instagram.com/yiamarin" target="_blank">
+        <!-- SOCIAL MEDIA -->
+        <div class="social">
+          <h2>Follow us</h2>
+          <!-- prettier-ignore -->
+          <a href="https://www.instagram.com/yiamarin" target="_blank">
           <?xml version="1.0" encoding="iso-8859-1"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
            <svg
@@ -516,15 +491,20 @@
             </g>
           </svg>
         </a>
+        </div>
       </div>
-      <div class="signature">
-        <p>
-          <span class="signature-prg"
-            >Designed for Yiamarin Apartments guests</span
-          >
-          with care by
-        </p>
-        <img class="digiko" src="images/png_icons/digiko.png" alt="" />
+      <div class="footer-second-row">
+        <div class="signature">
+          <p>
+            <span class="signature-prg"
+              >Designed for Yiamarin Apartments guests</span
+            >
+            with care by
+          </p>
+          <a href="tel:+306944622165"
+            ><img class="digiko" src="images/png_icons/digiko.png" alt=""
+          /></a>
+        </div>
       </div>
     </footer>
 

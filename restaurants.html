@@ -10,11 +10,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <meta name="author" content="Sonocode / Lunor" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -22,36 +19,37 @@
   <body>
     <!--Navigation Bar-->
     <nav class="nav-bar">
-      <a href="index.html">
-        <img
-          id="logo"
-          src="images/Yiamarin-Logo.jpg"
-          alt="Yiamarin Logo"
-          href="giamarin-guidebook.html"
-      /></a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="restaurants.html">Restaurants</a></li>
-        <li><a href="beaches.html">Beaches</a></li>
-        <li><a href="explore.html">Explore</a></li>
-        <li><a href="activities.html">Activities</a></li>
-        <li>
-          <a href="cultural-historic-sites.html"
-            >Cultural &amp; Historic Sites</a
-          >
-        </li>
-      </ul>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            id="logo"
+            src="images/Yiamarin-Logo.jpg"
+            alt="Yiamarin Logo"
+            href="index.html"
+        /></a>
+      </div>
+      <div class="nav-bar-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="beaches.html">Beaches</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li>
+            <a href="history-culture.html">History &amp; Culture</a>
+          </li>
+          <li><a href="activities.html">Activities</a></li>
+        </ul>
+      </div>
 
       <!-- language Switch -->
-      <div class="language-switch">
-        <a href="restaurants.html" class="flag">🇬🇧</a>
-        <a href="Εστιατόρια.html" class="flag">🇬🇷</a>
+      <div class="language-switch visually-hidden">
+        <a href="giamarin-guidebook.html" class="flag">🇬🇧</a>
+        <a href="Οδηγός-yiamarin.html" class="flag">🇬🇷</a>
       </div>
     </nav>
 
     <main>
       <!-- Intro -->
-      <section class="intro">
+      <!--  <section class="intro">
         <div class="welcome-message">
           <p class="welcome-p fade-in">
             Explore top places to eat across Lasithi, from cozy seaside tavernas
@@ -66,7 +64,7 @@
             hospitality, starting with the closest restaurants first.
           </p>
         </div>
-      </section>
+      </section>-->
 
       <section>
         <div class="container-wrap">
@@ -94,7 +92,7 @@
                 href="https://maps.app.goo.gl/LwW5MxNks4Ro1CqQA"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -123,7 +121,7 @@
                 href="https://maps.app.goo.gl/vPWkiWpTUKqxbPXA6"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -152,7 +150,7 @@
                 href="https://maps.app.goo.gl/TJFfBMDyGLMAG4gv5"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -181,7 +179,7 @@
                 href="https://maps.app.goo.gl/yYmnah5qVgCw6o788"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -213,7 +211,7 @@
                 href="https://maps.app.goo.gl/uWZBEaWpihvvohXM6"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -245,7 +243,7 @@
                 href="https://maps.app.goo.gl/P7CBk123cqtVTE5G7"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -273,7 +271,7 @@
                 href="https://maps.app.goo.gl/BZoKr7jbDt2Rx13X6"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -302,7 +300,7 @@
                 href="https://maps.app.goo.gl/UhMonjYY7Kpojvyq5"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -331,7 +329,7 @@
                 href="https://maps.app.goo.gl/M4JH2JR4uDfNBpQu8"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -360,7 +358,7 @@
                 href="https://maps.app.goo.gl/j6H84SHPC6A2ZGcK7"
                 target="_blank"
                 rel="noopener noreferrer"
-                >View on Maps</a
+                >📍 View on Maps</a
               >
             </div>
           </div>
@@ -370,93 +368,95 @@
 
     <!--FOOTER-->
     <footer>
-      <!--Emergency Contact-->
-      <div class="emergency-contacts">
-        <h2>
-          <i class="fa-solid fa-triangle-exclamation"></i> Emergency Contacts
-        </h2>
-        <ul>
-          <li>
-            <i class="fa-solid fa-phone-volume"></i>Emergency:
-            <a href="tel:112">112</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-fire-extinguisher"></i>Fire Department:
-            <a href="tel:199">199</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-kit-medical"></i>Hospital:
-            <a href="tel:106">106</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-shield-halved"></i>Police:
-            <a href="tel:100">100</a>
-          </li>
-        </ul>
-      </div>
+      <div class="footer-first-row">
+        <!--Emergency Contact-->
+        <div class="emergency-contacts">
+          <h2>
+            <i class="fa-solid fa-triangle-exclamation"></i> Emergency Contacts
+          </h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone-volume"></i>Emergency:
+              <a href="tel:112">112</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-fire-extinguisher"></i>Fire Department:
+              <a href="tel:199">199</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-kit-medical"></i>Hospital:
+              <a href="tel:106">106</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-shield-halved"></i>Police:
+              <a href="tel:100">100</a>
+            </li>
+          </ul>
+        </div>
 
-      <!--Transports-->
-      <div class="transports">
-        <h2><i class="fa-solid fa-route"></i> Local Transports</h2>
-        <ul>
-          <li>
-            <i class="fa-solid fa-taxi"></i>Taxi Contact:<a
-              href="tel:30 697 7352782"
-            >
-              +30 697 7352782</a
-            >
-          </li>
-          <li>
-            <i class="fa-solid fa-bus"></i
-            ><a
-              class="link"
-              href="https://www.ktelherlas.gr/en"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Bus Timetable</a
-            >
-          </li>
-          <li>
-            <i class="fa-solid fa-bus"></i
-            ><a
-              class="link"
-              href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Bus Stop</a
-            >
-          </li>
-        </ul>
-      </div>
+        <!--Transports-->
+        <div class="transports">
+          <h2><i class="fa-solid fa-route"></i> Local Transports</h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-taxi"></i>Taxi Contact:<a
+                href="tel:30 697 7352782"
+              >
+                +30 697 7352782</a
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-bus"></i
+              ><a
+                class="link"
+                href="https://www.ktelherlas.gr/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bus Timetable</a
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-bus"></i
+              ><a
+                class="link"
+                href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bus Stop</a
+              >
+            </li>
+          </ul>
+        </div>
 
-      <!-- CONTACT -->
-      <div class="contacts">
-        <h2><i class="fa-solid fa-phone"></i>Contacts</h2>
-        <ul>
-          <li>
-            <i class="fa-solid fa-phone"></i
-            ><a class="tel" href="tel:+306944622165">+30 694 4622165</a>
-          </li>
-          <li>
-            <i class="fab fa-whatsapp whatsapp-icon-top"></i>
-            <a
-              class="app"
-              href="https://wa.me/447459293270"
-              target="_blank"
-              rel="noopener noreferrer"
-              >WhatsApp Us</a
-            >
-          </li>
-        </ul>
-      </div>
+        <!-- CONTACT -->
+        <div class="contacts">
+          <h2><i class="fa-solid fa-phone"></i>Contacts</h2>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone"></i
+              ><a class="tel" href="tel:+306944622165">+30 694 4622165</a>
+            </li>
+            <li>
+              <i class="fab fa-whatsapp whatsapp-icon-top"></i>
+              <a
+                class="app"
+                href="https://wa.me/447459293270"
+                target="_blank"
+                rel="noopener noreferrer"
+                >WhatsApp Us</a
+              >
+            </li>
+          </ul>
+        </div>
 
-      <!-- SOCIAL MEDIA -->
-      <div class="social">
-        <h2>Follow us</h2>
-        <a href="https://www.instagram.com/yiamarin" target="_blank">
+        <!-- SOCIAL MEDIA -->
+        <div class="social">
+          <h2>Follow us</h2>
+          <!-- prettier-ignore -->
+          <a href="https://www.instagram.com/yiamarin" target="_blank">
           <?xml version="1.0" encoding="iso-8859-1"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg
+           <svg
             class="ig"
             height="50px"
             width="50px"
@@ -539,6 +539,20 @@
             </g>
           </svg>
         </a>
+        </div>
+      </div>
+      <div class="footer-second-row">
+        <div class="signature">
+          <p>
+            <span class="signature-prg"
+              >Designed for Yiamarin Apartments guests</span
+            >
+            with care by
+          </p>
+          <a href="tel:+306944622165"
+            ><img class="digiko" src="images/png_icons/digiko.png" alt=""
+          /></a>
+        </div>
       </div>
     </footer>
   </body>
