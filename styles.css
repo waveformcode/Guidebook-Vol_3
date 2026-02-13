@@ -64,13 +64,12 @@ body {
 }
 
 .nav-bar li {
-  margin-right: 20px;
   padding: 20px;
 }
 
 .nav-bar a {
   text-decoration: none;
-  padding: 10px;
+
   border-radius: 20px;
   color: #2c3e50;
 }
@@ -103,9 +102,11 @@ body {
   .nav-bar {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .nav-bar-links {
+    display: flex;
     overflow: scroll;
     overflow-y: hidden;
     width: 100%;
@@ -115,9 +116,8 @@ body {
 
   #logo {
     max-width: 80px;
-    margin: 20px;
-    margin: 0;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
 }
 
@@ -137,13 +137,33 @@ body {
     #d7ebf072,
     rgba(255, 255, 255, 0.393)
   );
-  padding: 1em;
+  padding: 2em;
   border-radius: 20px;
   border: none;
+  position: relative;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    0 10px 24px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .info-toggle:hover {
-  scale: 1.02;
+  transform: scale(1.02);
+}
+
+.nearby-essentials-arrow {
+  display: inline-block;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid rgba(0, 0, 0, 0.565);
+  transform: rotate(90deg);
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 92%;
 }
 
 .info-toggle p {
@@ -199,37 +219,6 @@ body {
   font-weight: var(--xl-weight);
 }
 
-/*.apartment-information {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-image: linear-gradient(
-    to top,
-    #d7ebf072,
-    rgba(255, 255, 255, 0.393)
-  );
-  width: 100%;
-  box-shadow: var(--box-shadow);
-  max-width: 1200px;
-  margin: 40px auto;
-  border-radius: 20px;
-}
-
-.apartment-information h2 {
-  font-size: var(--body-h2-fs);
-  color: var(--font-grey-color2);
-  margin-bottom: 5px;
-}
-
-.apartment-information p {
-  font-size: clamp(1rem, 1.3vw, 1.3rem);
-  color: var(--font-grey-color);
-  max-width: 300px;
-  text-align: center;
-  line-height: var(--line-height-md);
-}
-*/
 /* ==== MAP_LOCATION SECTION ==== */
 .map-section {
   display: flex;
@@ -272,7 +261,6 @@ body {
 .essential {
   display: flex;
   flex-direction: row;
-  padding: 10px;
 }
 
 .essential a {
@@ -356,23 +344,10 @@ body {
   margin-top: 80px;
   position: relative;
   z-index: 1;
-  margin: 40px auto;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
 }
-
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-grid-template-rows: 1fr 1fr 1fr;
-grid-template-areas:
-  "restaurants beaches explore"
-  "culture activities explore-istro";
-gap: 1em;
-justify-content: center;
-width: 100%;
-max-width: 1200px;
-margin-top: 80px;
-position: relative;
-z-index: 1;
-margin: 40px auto;
 
 .recommedations-container {
   position: relative;
@@ -701,7 +676,7 @@ h3 {
 footer {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: 40px;
   width: 100%;
   box-shadow: var(--box-shadow);
   padding-top: 40px;
@@ -721,6 +696,7 @@ footer {
   justify-items: center;
   align-items: center;
   margin-top: 40px;
+  margin: 0 auto;
 }
 
 /*==== wifi ====*/
@@ -820,11 +796,12 @@ select {
 
 .social svg {
   width: 30px;
-  height: px;
+  height: 30px;
 }
 
 .signature {
   display: flex;
+  margin-top: 40px;
 }
 
 .signature p {
@@ -846,23 +823,6 @@ select {
     background-color: white;
   }
   /*==== NAV BAR LOGO MOBILE ====*/
-  .nav-bar {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-bar-links {
-    overflow: scroll;
-    overflow-y: hidden;
-    width: 100%;
-  }
-
-  #logo {
-    max-width: 80px;
-    margin: 20px;
-    margin: 0;
-    margin-bottom: 10px;
-  }
 
   /*==== Welcome Message MOBILE ====*/
   .intro {
@@ -927,15 +887,9 @@ select {
 
   /*==== NEARBY ESSENTIALS MOBILE ====*/
   .nearby-essentials {
-    width: 100%;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    margin: 0 auto;
   }
 
   .nearby-essential-list {
-    display: flex;
     flex-direction: row;
     position: fixed;
     justify-content: center;
@@ -953,6 +907,8 @@ select {
   }
 
   .essential {
+    display: flex;
+    width: 100%;
     padding: 0.5em 1em;
   }
 
@@ -1026,7 +982,7 @@ select {
     text-align: center;
   }
 
-  .footer-second-row {
+  .signature {
     margin-top: 0;
   }
 
