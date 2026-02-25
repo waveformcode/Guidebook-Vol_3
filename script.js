@@ -5,18 +5,20 @@ const body = document.querySelector("#body");
 
 btn.addEventListener("click", () => {
   infoPanel.classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
 });
 
 //PANEL INFORMATION ON/OFF
 infoPanel.addEventListener("click", (event) => {
-  if (event.target === infoPanel || event.target === body) {
+  if (event.target === infoPanel) {
     infoPanel.classList.remove("active");
+    document.body.classList.remove("no-scroll");
   }
 });
 
 //WIFI SELECT
-const wifiSelect = document.querySelector("#wifiSelect");
-const wifiReturn = document.querySelector("#wifiReturn");
+const wifiSelect = querySelectorAll(".wifiSelect");
+const wifiReturn = document.querySelector(".wifiReturn");
 
 wifiSelect.addEventListener("change", () => {
   if (wifiSelect.value === "cozy") {
