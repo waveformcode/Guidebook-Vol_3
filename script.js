@@ -1,23 +1,3 @@
-//APARTMENT INFORMATION BUTTON
-/*const btn = document.querySelector("#btn");
-const infoPanel = document.querySelector("#infoPanel");
-const body = document.querySelector("#body");
-
-btn.addEventListener("click", () => {
-  infoPanel.classList.toggle("active");
-  document.body.classList.toggle("no-scroll");
-});
-
-//PANEL INFORMATION ON/OFF
-infoPanel.addEventListener("click", (event) => {
-  if (event.target === infoPanel) {
-    infoPanel.classList.remove("active");
-    document.body.classList.remove("no-scroll");
-  }
-});
-
-*/
-
 //WIFI ACCESS
 const wifiBox = document.querySelector("#wifiBox");
 const wifiAccess = document.querySelector("#wifiAccess");
