@@ -1208,12 +1208,18 @@ body.modal-open {
   }
 
   .nav-bar-links {
-    display: flex;
+    display: inline-block;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+
     overflow-x: scroll;
     overflow-y: hidden;
+  }
+
+  .nav-bar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   #logo {
