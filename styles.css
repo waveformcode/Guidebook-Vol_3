@@ -5,6 +5,9 @@
 }
 
 :root {
+  --grey-font: #4a4a4a;
+  --grey-font2: #555;
+  --grey-font3: #505050;
   --font-color: white;
   --box-shadow-min: 0 1px 5px rgba(0, 0, 0, 0.12);
   --box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
@@ -293,10 +296,13 @@ body.no-scroll {
 .apt-info-title,
 .location-title {
   font-size: clamp(1.2rem, 3vw, 1.5rem);
-  margin-bottom: 10px;
   color: #1f2933;
   text-decoration: none;
   font-weight: var(--md-weight);
+}
+
+.location-title {
+  margin-bottom: 10px;
 }
 
 .info-link,
@@ -1276,6 +1282,8 @@ body.modal-open {
   .apt-info-title {
     grid-area: apt-info-title;
     margin: 40px 0 0 0;
+    color: var(--grey-font3);
+    font-weight: var(--lg-weight);
   }
 
   .info-link,
@@ -1289,7 +1297,6 @@ body.modal-open {
   .map-section {
     grid-area: map-section;
     width: 100%;
-
     margin-bottom: 40px;
   }
 
@@ -1319,35 +1326,50 @@ body.modal-open {
   /*==== RECOMMENDATIONS MOBILE====*/
   .recommendations-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    /* margin-top: 80px;*/
+    margin-top: 0;
+    padding-top: 0;
     column-gap: 10px;
     align-items: center;
   }
 
   .recommendation-heading {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+    align-items: baseline;
+    margin-left: 20px;
     margin-top: 80px;
-    margin-bottom: 0;
-    text-align: center;
-    color: #0000006d;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--grey-font3);
+    font-weight: var(--lg-weight);
   }
 
-  .recommendation-heading::before {
+  /* .recommendation-heading::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    border-top: 1px dotted #c7c6c6;
+    align-items: center;
+    justify-content: center;
+  }*/
+
+  .location-title {
+    color: var(--grey-font3);
+    font-weight: var(--lg-weight);
+  }
+
+  /*.recommendation-heading::before {
     content: "";
     flex: 1;
     border-top: 1px dotted #0000006d;
     margin-left: 20px;
-  }
+  }}
 
   .recommendation-heading::after {
     content: "";
     flex: 1;
     border-top: 1px dotted #62616198;
     margin-right: 20px;
-  }
+  }*/
 
   .recommendations-container {
     width: 100%;
