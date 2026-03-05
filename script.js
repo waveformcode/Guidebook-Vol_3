@@ -46,6 +46,20 @@ pageOverlay.addEventListener("click", () => {
   pageOverlay.classList.remove("active");
 });
 
+// DRIVING BUTTON / MODAL
+const drivingBtn = document.querySelector("#drivingButton");
+const drivingModal = document.querySelector("#drivingModal");
+
+drivingBtn.addEventListener("click", () => {
+  drivingModal.classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
+});
+
+drivingModal.addEventListener("click", () => {
+  drivingModal.classList.remove("active");
+  document.body.classList.remove("no-scroll");
+});
+
 // SAFETY & EMERGENCY
 const safetyModal = document.querySelector("#safetyModal");
 const safetyBtn = document.querySelector("#safetyBtn");
@@ -56,12 +70,14 @@ const safetySheet = document.querySelector("#safetySheet");
 safetyBtn.addEventListener("click", () => {
   safetyModal.classList.add("active");
   document.body.classList.add("modal-open");
+  document.body.classList.toggle("no-scroll");
 });
 
 // CLOSE (tap outside)
 safetyOverlay.addEventListener("click", () => {
   safetyModal.classList.remove("active");
   document.body.classList.remove("modal-open");
+  document.body.classList.remove("no-scroll");
 });
 
 // SWIPE DOWN CLOSE
@@ -93,6 +109,7 @@ safetySheet.addEventListener("touchend", () => {
   if (diff > 120) {
     safetyModal.classList.remove("active");
     document.body.classList.remove("modal-open");
+    document.body.classList.remove("no-scroll");
   }
 
   safetySheet.style.transform = "";

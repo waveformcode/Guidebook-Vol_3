@@ -815,6 +815,9 @@ body.no-scroll {
   font-weight: var(--md-weight);
   font-size: 0.9rem;
   border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .map-link:hover {
@@ -839,6 +842,14 @@ body.no-scroll {
   margin-bottom: 5px;
 }
 
+.route-icon {
+  width: 15px;
+  height: auto;
+  margin-right: 5px;
+  stroke-width: 2.5;
+  color: var(--link-color);
+}
+
 /*==== CALL HOST ====*/
 .call-host {
   display: flex;
@@ -860,6 +871,7 @@ body.no-scroll {
   color: #000000bd;
   text-decoration: none;
   font-weight: var(--md-weight);
+  letter-spacing: 0.02em;
 }
 
 .closing-message {
@@ -904,83 +916,191 @@ body.no-scroll {
   font-weight: var(--lg-weight);
 }
 
-/*==== USEFUL CONTACTS ====*/
-.useful-contacts {
-  display: flex;
-  width: 100%;
-  max-width: auto;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+/*==== TRANSPORTS ====*/
+.transports {
   margin-top: 80px;
-  padding: 20px;
-  gap: 80px;
 }
 
-.transports,
-.emergency-contacts {
+.transports h2 {
+  display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: #000000bd;
+  font-weight: var(--md-weight);
+  letter-spacing: 0.02em;
+}
+
+.contacts-heading-icon {
+  margin-right: 15px;
+  color: #000000bd;
+  stroke-width: 2;
+}
+
+.transports-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 10px;
+}
+
+.transports a {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  border-radius: 20px;
+  color: var(--grey-font3);
+  font-weight: var(--lg-weight);
+  transition: transform 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.driving-modal-button {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow);
+  border: none;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  background: inherit;
+  color: var(--grey-font3);
+  font-weight: var(--lg-weight);
+  transition: transform 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.driving-modal-button:hover,
+.transports a:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.transports a:hover,
+.transports a:focus,
+.driving-modal-button:hover,
+.driving-modal-button:focus {
+  background-color: #efefef;
 }
 
 .contacts-icons {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
+  display: flex;
+  width: 25px;
+  height: auto;
+  align-self: center;
+  justify-content: center;
   stroke-width: 2;
   fill: none;
-  margin-right: 10px;
-  color: #3f4d5f;
+  color: #3f6ea8;
 }
 
-.emergency-contacts,
-.transportsl {
-  height: 100px;
-}
-
-.emergency-contacts h3,
-.transports h3 {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  margin-bottom: 5px;
-  font-weight: var(--md-weight);
-  color: rgba(0, 0, 0, 0.862);
+/*==== DRIVING MODAL ====*/
+.driving-modal {
   display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.568);
+  backdrop-filter: blur(15px);
   align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  opacity: 0;
+  transform: scale(0.96);
+  opacity: 0;
+  transform: translateY(1000px);
+  transition:
+    transform 0.45s ease,
+    opacity 0.45s ease;
+  pointer-events: none;
 }
 
-.emergency-contacts li,
-.transports li {
-  line-height: 1.5;
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
-  color: #374151;
-  display: flex;
-  align-items: center;
+.driving-modal.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
-.emergency-contacts li a,
-.transports li a,
-.contacts li a {
-  text-decoration: none;
-  color: var(--link-color);
+.modal-wrap {
+  background: #f6f7f9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
 }
 
-.emergency-contacts ul,
-.transports ul,
-.contacts ul {
+.driving-modal h2 {
+  font-size: clamp(1.2rem, 3vw, 1.3rem);
+  line-height: 1.3;
+  max-width: 600px;
+  margin-bottom: 10px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.driving-modal p {
+  font-size: clamp(1rem, 3vw, 1rem);
+  line-height: 1.3;
+  max-width: 600px;
+  margin-bottom: 20px;
+  color: #52565e;
+  font-weight: 400;
+}
+
+.driving-modal ul {
+  margin-top: 10px;
   list-style-type: none;
+  max-width: 600px;
+  padding: 0.5em 1em;
+  background: #ffffff;
+  border-radius: 10px;
 }
 
-.emergency-contacts a:visited,
-.transports a:visited,
-.contacts a:visited {
-  color: var(--active-link-color);
+.driving-modal li {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 0;
+  line-height: 1.5;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  border-bottom: 1px solid #ececec;
+  align-items: center;
 }
 
-.emergency-contacts i,
-.transports i,
-.contacts i {
-  margin-right: 10px;
-  font-size: 15px;
+.driving-modal-icon {
+  width: 20px;
+  height: 20px;
+  color: #1b4167;
+  stroke-width: 1.5;
+}
+
+.icon-driving-circle {
+  width: 40px;
+  height: 40px;
+  background: #d7e5f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.warning-icon {
+  color: #c33704;
+}
+
+.driving-modal {
+  line-height: var(--line-height-lg);
 }
 
 /*==== EXPLORE ISTRO ====*/
@@ -1343,33 +1463,10 @@ body.modal-open {
     font-weight: var(--lg-weight);
   }
 
-  /* .recommendation-heading::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    border-top: 1px dotted #c7c6c6;
-    align-items: center;
-    justify-content: center;
-  }*/
-
   .location-title {
     color: var(--grey-font3);
     font-weight: var(--lg-weight);
   }
-
-  /*.recommendation-heading::before {
-    content: "";
-    flex: 1;
-    border-top: 1px dotted #0000006d;
-    margin-left: 20px;
-  }}
-
-  .recommendation-heading::after {
-    content: "";
-    flex: 1;
-    border-top: 1px dotted #62616198;
-    margin-right: 20px;
-  }*/
 
   .recommendations-container {
     width: 100%;
@@ -1445,13 +1542,40 @@ body.modal-open {
     margin-top: 10px;
   }
 
+  /*==== CARD ====*/
+  .card-h2 {
+    text-align: center;
+  }
+
+  .card-info {
+    text-align: center;
+  }
+
   .card-footer {
     flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .card-footer a {
+    margin-top: 20px;
+  }
+
+  .card-footer h3 {
+    text-align: center;
   }
 
   .map-link {
     margin-top: 10px;
     padding: 0;
+  }
+
+  .activities-card-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .driving-modal {
+    overflow-y: scroll;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 }

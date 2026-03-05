@@ -74,7 +74,7 @@
     <header class="header">
       <!--Navigation Bar-->
       <nav class="nav-bar">
-        <a href="index.html" class="logo" aria-label="Yiamarin Apartments Home">
+        <a href="/" class="logo" aria-label="Yiamarin Apartments Home">
           <svg viewBox="-50 0 500 600" xmlns="http://www.w3.org/2000/svg">
             <!-- Χρώμα -->
             <g
@@ -171,7 +171,6 @@
         </a>
         <div class="nav-bar-links">
           <ul>
-            <li><a href="index.html">Home</a></li>
             <li>
               <a href="restaurants.html" data-i18n="nav-restaurants"
                 >Restaurants</a
@@ -439,7 +438,7 @@
         </div>
       </section>
 
-      <!-- ARIVAL INFO DESKTOP -->
+      <!-- ARIVAL INFO -->
       <section class="arrival-info" aria-labelledby="arrival-title">
         <div class="arrival-wrapper">
           <h2 id="arrival-title" class="apt-info-title">
@@ -636,16 +635,8 @@
             >
               <div class="map-container">
                 <picture>
-                  <source
-                    media="(max-width: 640px)"
-                    srcset="images/map10-480.webp"
-                  />
-                  <source
-                    media="(max-width: 1024px)"
-                    srcset="images/map10-900.webp"
-                  />
                   <img
-                    src="images/map10-900.webp"
+                    src="images/yiamarin-map-1400.webp"
                     alt="Map location of Yiamarin Apartments"
                   />
                 </picture>
@@ -1060,14 +1051,12 @@
           </a>
         </div>
       </section>
-    </main>
 
-    <section class="useful-contacts, visually-hidden">
       <!--Transports-->
       <section class="transports">
-        <h3>
+        <h2>
           <svg
-            class="contacts-icons lucide-route"
+            class="contacts-heading-icon lucide-route"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -1083,9 +1072,10 @@
             <circle cx="18" cy="5" r="3" />
           </svg>
           Get Around
-        </h3>
-        <ul>
-          <li>
+        </h2>
+        <div class="transports-boxes">
+          <!--Taxi-->
+          <a class="taxi" href="tel:+306977352782">
             <svg
               class="contacts-icons lucide-car-taxi-front-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -1108,125 +1098,19 @@
               <path d="M5 18v2" />
               <path d="M19 18v2" />
             </svg>
-            <a href="tel:+306977352782">Call Taxi</a>
-          </li>
-          <li>
-            <svg
-              class="contacts-icons lucide-bus"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M8 6v6" />
-              <path d="M15 6v6" />
-              <path d="M2 12h19.6" />
-              <path
-                d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"
-              />
-              <circle cx="7" cy="18" r="2" />
-              <path d="M9 18h5" />
-              <circle cx="16" cy="18" r="2" />
-            </svg>
-            <a
-              class="link"
-              href="https://www.ktelherlas.gr/en"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Bus timetable (opens in new tab)"
-              >Bus Routes</a
-            >
-          </li>
-          <li>
-            <svg
-              class="contacts-icons lucide-bus"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M8 6v6" />
-              <path d="M15 6v6" />
-              <path d="M2 12h19.6" />
-              <path
-                d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"
-              />
-              <circle cx="7" cy="18" r="2" />
-              <path d="M9 18h5" />
-              <circle cx="16" cy="18" r="2" />
-            </svg>
-            <a
-              class="link"
-              href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Bus Stop</a
-            >
-          </li>
-        </ul>
-      </section>
-
-      <!--Emergency Contact-->
-      <section class="emergency-contacts">
-        <h3>
-          <svg
-            class="contacts-icons lucide-triangle-alert"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            Call Taxi</a
           >
-            <path
-              d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"
-            />
-            <path d="M12 9v4" />
-            <path d="M12 17h.01" />
-          </svg>
 
-          Emergency Contacts
-        </h3>
-        <ul>
-          <li>
+          <!--Bus Routes-->
+          <a
+            class="link bus-routes"
+            href="https://www.ktelherlas.gr/en"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Bus timetable (opens in new tab)"
+          >
             <svg
-              class="contacts-icons lucide-phone-call"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-phone-call-icon lucide-phone-call"
-            >
-              <path d="M13 2a9 9 0 0 1 9 9" />
-              <path d="M13 6a5 5 0 0 1 5 5" />
-              <path
-                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
-              />
-            </svg>
-            Emergency:
-            <a href="tel:112" aria-label="Call emergency number 112">112</a>
-          </li>
-          <li>
-            <svg
-              class="contacts-icons lucide-fire-extinguisher"
+              class="contacts-icons lucide-bus"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -1237,46 +1121,28 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <path d="M15 6.5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3.5" />
-              <path d="M9 18h8" />
-              <path d="M18 3h-3" />
-              <path d="M11 3a6 6 0 0 0-6 6v11" />
-              <path d="M5 13h4" />
+              <path d="M8 6v6" />
+              <path d="M15 6v6" />
+              <path d="M2 12h19.6" />
               <path
-                d="M17 10a4 4 0 0 0-8 0v10a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2Z"
+                d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"
               />
+              <circle cx="7" cy="18" r="2" />
+              <path d="M9 18h5" />
+              <circle cx="16" cy="18" r="2" />
             </svg>
-            Fire Department:
-            <a href="tel:199" aria-label="Call fire department 1">199</a>
-          </li>
-          <li>
+            Bus Routes</a
+          >
+
+          <!--Bus Stop-->
+          <a
+            class="link bus-stop"
+            href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
-              class="contacts-icons lucide-hospital"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-hospital-icon lucide-hospital"
-            >
-              <path d="M12 7v4" />
-              <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
-              <path d="M14 9h-4" />
-              <path
-                d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2"
-              />
-              <path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" />
-            </svg>
-            Hospital:
-            <a href="tel:106" aria-label="Call hospital 106">106</a>
-          </li>
-          <li>
-            <svg
-              class="contacts-icons lucide-shield-check"
+              class="contacts-icons lucide-bus"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -1287,17 +1153,211 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
+              <path d="M8 6v6" />
+              <path d="M15 6v6" />
+              <path d="M2 12h19.6" />
               <path
-                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"
               />
-              <path d="m9 12 2 2 4-4" />
+              <circle cx="7" cy="18" r="2" />
+              <path d="M9 18h5" />
+              <circle cx="16" cy="18" r="2" />
             </svg>
-            Police:
-            <a href="tel:100" aria-label="Call police 100">100</a>
-          </li>
-        </ul>
+            Bus Stop</a
+          >
+          <!--Drive In Crete-->
+          <button
+            id="drivingButton"
+            class="driving-modal-button"
+            href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="contacts-icons icon-tabler-car"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path
+                d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"
+              />
+            </svg>
+            Driving in Crete
+          </button>
+        </div>
       </section>
-    </section>
+
+      <section class="driving-modal" id="drivingModal">
+        <div class="modal-wrap">
+          <h2>Getting around by car?</h2>
+          <p>Here are a few local tips to keep in mind.</p>
+          <ul>
+            <li>
+              <span class="icon-driving-circle" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="warning-icon driving-modal-icon icon icon-tabler icons-tabler-outline icon-tabler-alert-square-rounded"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9"
+                  />
+                  <path d="M12 8v4" />
+                  <path d="M12 16h.01" />
+                </svg>
+              </span>
+              Some drivers may overtake even on narrow roads, so stay calm and
+              keep to the right.
+            </li>
+            <li>
+              <span class="icon-driving-circle" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="driving-modal-icon icon icon-tabler icons-tabler-outline icon-tabler-car"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path
+                    d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"
+                  />
+                </svg>
+              </span>
+              Local drivers often move slightly to the right to let faster cars
+              pass.
+            </li>
+            <li>
+              <span class="icon-driving-circle" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="driving-modal-icon lucide lucide-building2-icon lucide-building-2"
+                >
+                  <path d="M10 12h4" />
+                  <path d="M10 8h4" />
+                  <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+                  <path
+                    d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"
+                  />
+                  <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" />
+                </svg>
+              </span>
+              Roads in villages can be narrow, so drive slowly and give way when
+              needed.
+            </li>
+            <li>
+              <span class="icon-driving-circle" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="driving-modal-icon icon icon-tabler icons-tabler-outline icon-tabler-deer"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 3c0 2 1 3 4 3c2 0 3 1 3 3" />
+                  <path d="M21 3c0 2 -1 3 -4 3c-2 0 -3 .333 -3 3" />
+                  <path
+                    d="M12 18c-1 0 -4 -3 -4 -6c0 -2 1.333 -3 4 -3s4 1 4 3c0 3 -3 6 -4 6"
+                  />
+                  <path d="M15.185 14.889l.095 -.18a4 4 0 1 1 -6.56 0" />
+                  <path d="M17 3c0 1.333 -.333 2.333 -1 3" />
+                  <path d="M7 3c0 1.333 .333 2.333 1 3" />
+                  <path d="M7 6c-2.667 .667 -4.333 1.667 -5 3" />
+                  <path d="M17 6c2.667 .667 4.333 1.667 5 3" />
+                  <path d="M8.5 10l-1.5 -1" />
+                  <path d="M15.5 10l1.5 -1" />
+                  <path d="M12 15h.01" />
+                </svg>
+              </span>
+              Watch for goats or sheep on rural roads, especially in the
+              countryside.
+            </li>
+            <li>
+              <span class="icon-driving-circle" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="driving-modal-icon lucide lucide-square-parking-icon lucide-square-parking"
+                >
+                  <rect width="18" height="18" x="3" y="3" rx="2" />
+                  <path d="M9 17V7h4a3 3 0 0 1 0 6H9" />
+                </svg>
+              </span>
+              Parking in popular areas can be limited during summer months.
+            </li>
+            <li>
+              <span class="icon-driving-circle" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="driving-modal-icon lucide lucide-mountain-snow-icon lucide-mountain-snow"
+                >
+                  <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+                  <path
+                    d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"
+                  />
+                </svg>
+              </span>
+              Drive carefully on mountain roads as they can be winding and
+              narrow.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
     <!--FOOTER-->
     <footer>
